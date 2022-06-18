@@ -1,4 +1,13 @@
-# Hi There
+# LeetCode Solutions
 
- This repo is purely based on solutions for LEETCODE questions
- 
+![LeetCode](assets/img/leetcode.png)
+
+ - [LeetCode](#leetcode)
+   - [About](#about)
+
+## About
+
+Here I publish my solutions to `LeetCode` questions
+
+Project Started: 19th, June, 2022.
+
