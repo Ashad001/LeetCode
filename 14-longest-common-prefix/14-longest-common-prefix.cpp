@@ -25,7 +25,7 @@ public:
             }
             if(check == 1)
             {
-                LongestPrefix += strs[0][i];
+                LongestPrefix.push_back(strs[0][i]);
             }
             
         }
