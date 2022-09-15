@@ -12,7 +12,7 @@ public:
         }
         
         bool check = 1;
-        string MyString = "";
+        string LongestPrefix;
         for(int i=0; i < a && check == 1; i++)
         {
             for(int j=0; j < strs.size(); j++)
@@ -25,23 +25,11 @@ public:
             }
             if(check == 1)
             {
-                MyString += strs[0][i];
+                LongestPrefix += strs[0][i];
             }
             
         }
         
-//         int c = 0;
-//         string F;
-//         for(int i=0; i<strs.size()); i++)
-//             for(int j=0; j<strs[i].length)
-//             {
-//                 if(strs[i][j] == strs[i+1][j])
-//                 {
-//                     c += 1;
-//                     F = F+strs[i][j];
-//                 }
-                
-//             }
-        return MyString;
+        return LongestPrefix;
     }
 };
