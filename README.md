@@ -1,4 +1,4 @@
-## Collection of [LeetCode](https://leetcode.com/ashad001sp/) Questions
+## A Collection of my [LeetCode](https://leetcode.com/ashad001sp/) Solution
 
 ![LeetCode](https://leetcode.com/static/images/LeetCode_Sharing.png)
 
