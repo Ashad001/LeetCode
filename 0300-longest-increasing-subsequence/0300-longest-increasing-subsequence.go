@@ -1,35 +1,32 @@
 func lengthOfLIS(nums []int) int {
-    if len(nums) < 1 {
-        return len(nums)
+    dp := make([]int, len(nums))
+    for i := range dp {
+        dp[i] = 1
     }
-    lengths := make([]int, len(nums))
-    for i := range lengths {
-        lengths[i] = 1
-    }
-    for i := range nums {
-        subProb := make([]int, i)
-        for j := 0; j < i; j++ {
-            if nums[j] < nums[i] {
-                subProb = append(subProb, lengths[j])
-            } 
-        }
-        if len(subProb) > 0 {
-            max := subProb[0]
-            for _, value := range subProb {
-                if value > max {
-                    max = value
-                }
+    for i := len(nums) - 1; i >= 0; i-- {
+        for j := i; j < len(nums); j++ {
+            if nums[i] < nums[j] {
+                dp[i] = max(dp[i], dp[j] + 1)
+        
             }
-            lengths[i] = max + 1
-        }        
+        }
+        
+    } 
+    return maxOfArr(dp);
+    
+}
+func max(a, b int) int {
+    if a > b {
+        return a 
     }
-    max := lengths[0]
-    for _, value := range lengths {
-        if value > max {
-            max = value 
+    return b
+}
+func maxOfArr(nums []int) int {
+    ret := -99999
+    for i := range(nums) {
+        if nums[i] > ret {
+            ret = nums[i]
         }
     }
-    return max
-    
-    
+    return ret
 }
